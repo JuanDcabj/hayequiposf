@@ -1,0 +1,112 @@
+[17-Oct-2012 00:50:07] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'JuanD'@'localhost' (using password: YES)
+[17-Oct-2012 00:53:15] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'JuanD'@'localhost' (using password: YES)
+[17-Oct-2012 00:53:46] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'JuanD'@'localhost' (using password: YES)
+[17-Oct-2012 00:55:57] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 00:56:37] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 00:58:24] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 00:58:25] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 00:58:28] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 00:58:29] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 00:58:30] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 00:58:38] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 00:58:48] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 02:37:01] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 02:37:08] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 04:14:44] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 04:15:06] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 04:15:20] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 04:15:44] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 06:43:39] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 06:44:19] PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'nobody'@'localhost' (using password: NO)
+[17-Oct-2012 07:12:13] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 07:12:13] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 07:12:16] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 07:12:36] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 07:12:53] Empty module and/or action after parsing the URL "/images/perfil.jpg" (/).
+[17-Oct-2012 17:24:44] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:44] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:44] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:44] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:44] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:44] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:44] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:45] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:45] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:45] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:45] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:46] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:46] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:46] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:46] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:46] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:46] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:47] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:47] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:47] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:47] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:47] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:47] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:47] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:47] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:54] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:54] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:54] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:55] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:55] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:55] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:55] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:55] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:56] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:56] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:57] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:57] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:57] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:57] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:57] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:57] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:57] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:58] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:58] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:58] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:58] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:58] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:58] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:58] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:59] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:59] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:59] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:59] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:59] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:59] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:24:59] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:00] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:00] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:04] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:04] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:04] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:05] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:07] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:07] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:07] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:08] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:08] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:08] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:08] Action "images/slider_principal" does not exist.
+[17-Oct-2012 17:25:08] Action "images/slider_principal" does not exist.
+[17-Oct-2012 19:27:32] Action "config/index" does not exist.
+[17-Oct-2012 19:27:32] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/hayequip/public_html/offside/lib/vendor/symfony-1.4.18/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/hayequip/public_html/offside/lib/vendor/symfony-1.4.18/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/hayequip/public_html/offside/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/hayequip/public_html/offside/plugins/sfDoctrineGuardPlugin/lib/sfGuardRememberMeFilter.class.php(56): sfFilterChain->execute()
+#3 /home/hayequip/public_html/offside/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfGuardRememberMeFilter->execute(Object(sfFilterChain))
+#4 /home/hayequip/public_html/offside/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#5 /home/hayequip/public_html/offside/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sf in /home/hayequip/public_html/offside/lib/vendor/symfony-1.4.18/lib/filter/sfBasicSecurityFilter.class.php on line 96

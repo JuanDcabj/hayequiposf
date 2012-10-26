@@ -1,0 +1,530 @@
+html { 
+	height: 100%;
+	font-family: 'Istok Web', sans-serif;
+        font-size: 11pt;
+	background: url(../images/potrero.jpg) no-repeat fixed;
+}
+
+* {
+	margin: 0;
+  	padding: 0;
+}
+
+p{
+        margin-top: 10px;
+}
+
+.clear{
+	clear:both;
+}
+
+#contenedorPagina{
+	text-align: center;
+}
+
+header{
+	background-color: rgb(18,73,18);
+	border-bottom: 1px solid rgb(0,51,0);
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 10;
+}
+
+header ul.menu {
+    list-style: none;
+    float: left;
+    height: 37px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 3px;
+}
+
+header ul.menu li {
+    display: inline;
+    margin-left: 30px;
+}
+
+header ul.menu li a{
+    text-decoration: none;
+    color: #FFF;
+    text-shadow: 2px 0px 0px rgba(121, 177, 121, 1);
+}
+
+#contenedorImagenHeader {
+    float: left;
+    width: 165px;
+}
+
+#contenedorBuscadorHeader{
+    float: left;
+    width: 215px;
+    margin-left: 20px;
+    height: 20px;
+    background-color: #FFF;
+    margin-top: 12px;
+    
+}
+
+#contenedorBuscadorHeader img{
+    float: right;
+}
+
+#contenedorBuscadorHeader input{
+    width: 185px;
+    height: 16px;
+    border: 0;
+    padding-left: 3px;
+}
+
+#contenedorPerfilHeader{
+    float: right;
+    width: 100px;
+    height: 37px;
+    margin-top: 3px;
+}
+
+#contenedorFotoPerfil{
+    float: right;
+    padding: 2px;
+    width: 50px;
+	background-color: rgba(255,255,255,0.85);
+	border-radius: 2px;
+	box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 3px;
+    margin-right: 5px;
+    
+}
+
+#navegadorArriba{
+	background-color: transparent;
+	color: #FFF;
+	width: 1024px;
+	height: 39px;
+	margin: 0 auto;
+	text-align: left;
+	z-index: 10;
+}
+
+#contenedorBanner{
+	width: 1024px;
+	height: auto;
+	margin: 45px auto 0px auto;
+	display: block;
+}
+
+img{  
+    display: block; 
+	
+}
+	
+.galleryBanner, .thumbsBanner, .panelHeaderFijo{
+	float: left;
+	border-radius: 2px;
+}
+
+.panelHeaderFijo{
+	width: 165px;
+	height: 195px;
+	background-color: rgba(153,153,153,0.85);
+	box-shadow: rgba(0, 0, 0, 0.8) 3px 7px 8px;
+	text-align:center;
+	vertical-align:central;
+	margin-right: 10px;
+	position: relative;
+}
+	
+.galleryBanner{
+	width: 590px;
+	height: 195px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 7px 8px;
+	overflow: hidden;
+}
+
+.galleryBanner img{
+	position: absolute;
+}
+.thumbsBanner{
+	width: 255px;
+	height: 195px;
+	box-shadow: rgba(0, 0, 0, 0.8) 3px 7px 8px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+
+#contenedorPaneles{
+	width: 1024px;
+	height: auto;
+	margin: 3px auto 0px auto;
+	display: block;
+	overflow: hidden;
+}
+
+.feed_principal{
+	width: 574px;
+	height: 555px;
+	border-radius: 8px;
+	margin-top: 10px;
+	margin-right: 12px;
+	margin-bottom: 12px;
+	background-color: rgba(255,255,255,0.85);
+	box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 3px;
+	float: left;
+	position: relative;
+	overflow: auto;
+	padding: 12px;
+	text-align: justify;
+ 
+}
+
+#feedTitulo{
+        width: 540px;
+        height: 26px;
+        margin-top: 2px;
+}
+
+#feedTitulo img {
+display: block;
+margin: auto;
+}
+
+#feedPostear{
+        width: 527px;
+        height: auto;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-right: 16px;
+        margin-top: 10px;
+        margin-bottom: 12px;
+        text-align: left;
+        font-size: 9pt;
+        text-decoration: underline;
+        color: #090;
+}
+
+#formPostear textarea {
+    width: 430px;
+    padding: 2px 5px 2px;
+    line-height: 18px;
+    border:1px solid #CCCCCC;
+    resize: vertical;
+}
+#formPostear input.btn {
+	background-image:url(../images/megafono.png);
+	width: 60px;
+        margin-left: 18px;
+        padding: 4px 4px;
+	background: -moz-linear-gradient(
+		top,
+		#7af07a 0%,
+		#43c43d);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#7af07a),
+		to(#43c43d));
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #016101;
+	-moz-box-shadow:
+		0px 0px 4px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,1);
+	-webkit-box-shadow:
+		0px 0px 4px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,1);
+	box-shadow:
+		0px 0px 4px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.4);
+        float: right;
+}
+
+.contenedorHistoria{
+        margin-top: 8px;
+        margin-bottom: 12px;
+        width: 540px;
+        height: auto;
+        border-top: 1px solid #999;
+}
+
+.containerHistoria{
+        height: auto;
+        float: left;
+}
+
+.historiaPosteo{
+        width: 429px;
+        min-height: 64px;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-wrap: normal;
+}
+
+.historiaPosteo a{
+        color: #016101;
+        font-weight: bold;
+        text-decoration: none;
+}
+
+.historiaPosteo a:hover{
+        text-decoration: underline;
+}
+
+.historiaPosteo span.apodo{
+        color: #016101;
+        font-style: italic;
+}
+
+.historiaAcciones{
+        width: 435px;
+        height: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 9pt;
+        text-decoration: underline;
+        color: #090;
+}
+
+.historiaAvatar{
+        margin-top: 12px;
+        width: 69px;
+        padding: 8px;
+        float: right;
+        background-color: #090;
+        position:relative;
+        bottom: 0px;
+        
+}
+
+.historiaAvatar img{
+        padding: 4px;
+        background-color: #FFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 1px;
+        display: block;
+        margin: auto;
+}
+
+.panel_seguinos{
+	width: 410px;
+	height: 45px;
+	margin-top: 10px;
+	background-color: rgba(153,153,153,0.85);
+	border-radius: 2px;
+	box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 3px;
+	float: left;
+	position: relative;
+}
+
+.panel3{
+	width: 200px;
+	height: 380px;
+	margin-top: 8px;
+	margin-right: 10px;
+	background-color: rgba(255,255,255,0.85);
+	border-radius: 2px;
+	box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 3px;
+	float: left;
+	position: relative;
+}
+
+.panel4{
+	width: 200px;
+	height: 380px;
+	margin-top: 8px;
+	background-color: rgba(255,255,255,0.85);
+	border-radius: 2px;
+	box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 3px;
+	float: left;
+	position: relative;
+}
+
+.panel5{
+	width: 410px;
+	height: 140px;
+	margin-top: 6px;
+	background-color: rgba(255,255,255,0.85);
+	border-radius: 2px;
+	box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 3px;
+	float: left;
+	position: relative;
+}
+
+.panelAbajo{
+	width: 256px;
+	height: 100px;
+	margin-bottom: 12px;
+	background-color: #FF6;
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 3px;
+	float: left;
+	position: relative;
+}
+
+
+.panelPubliAbajo{
+	width: 100%;
+	height: 180px;
+	background-color: #393;
+	float: left;
+	position: relative;
+}
+
+.panelTexto{
+	width: 300px;
+	height: 250px;
+	background-color: #FFF;
+	float: left;
+	position: relative;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 15px;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+
+}
+
+.panelVideo{
+	width: 355px;
+	height: 250px;
+	background-color: #FFF;
+	float: left;
+	position: relative;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 15px;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+
+}
+
+#contenedorContenidoFicha{
+	width: 1024px;
+	height: auto;
+	margin: 50px auto 0px auto;
+	border: 1px solid #000;
+	display: block;
+	overflow: hidden;
+}
+
+.panelFicha{
+	width: 400px;
+	height: 400px;
+	background-color: #09F;
+	float: left;
+	position: relative;
+	margin-top: 10px;
+	border: 1px solid #000;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+
+}
+
+.panelDatos{
+	width: 300px;
+	height: 120px;
+	background-color: #09F;
+	float: right;
+	position: relative;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 15px;
+	opacity:0.1;
+	filter:alpha(opacity=10);
+
+}
+
+.panelEstadisticas{
+	width: 300px;
+	height: 120px;
+	background-color: #09F;
+	float: right;
+	position: relative;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 15px;
+	opacity:0.1;
+	filter:alpha(opacity=10);
+
+}
+
+.panelAdicionales{
+	width: 300px;
+	height: 120px;
+	background-color: #09F;
+	float: right;
+	position: relative;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 15px;
+	opacity:0.1;
+	filter:alpha(opacity=10);
+
+}
+
+#contenedorContenidoPartido{
+	width: 1024px;
+	height: auto;
+	margin: 50px auto 0px auto;
+	border: 1px solid #000;
+	display: block;
+	overflow: hidden;
+}
+
+.panelEquipo1{
+	width: 300px;
+	height: 500px;
+	background-color: #FF9;
+	float: left;
+	position: relative;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 15px;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+
+}
+
+.panelEquipo2{
+	width: 300px;
+	height: 500px;
+	background-color: #FF9;
+	float: right;
+	position: relative;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 15px;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+
+}
+
+.panelCancha{
+	width: 350px;
+	height: 500px;
+	background-color: #090;
+	float: left;
+	position: relative;
+	margin: 10px;
+	border: 1px solid #000;
+	opacity:0.6;
+	filter:alpha(opacity=160);
+
+}
+
+footer{
+	width: 100%;
+	background-color: #999;
+	height: 50px;
+	margin: 0 auto;
+}

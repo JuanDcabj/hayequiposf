@@ -1,0 +1,42 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: club, action: index }
+  
+partidos:
+  url:   /partidos
+  param: { module: partidos, action: index }
+  
+canchas:
+  url:   /canchas
+  param: { module: canchas, action: index }
+  
+equipos:
+  url:   /equipos
+  param: { module: equipos, action: index }
+  
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+  
+sf_guard_register:
+  url:   /register
+  param: { module: sfGuardRegister, action: index }
+  
+sf_guard_signout:
+  url:   /salir
+  param: { module: sfGuardAuth, action: signout }
+  
+sf_guard_password:
+  url:   /recuperar
+  param: { module: sfGuardAuth, action: password }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

@@ -1,0 +1,143 @@
+Partido:
+  columns:
+    creador_id: {type: bigint(8), notnull: true}
+    fecha_creado: {type: date, notnull: true}
+    estado_partido_id: {type: bigint(8), notnull: true}
+    equipo_local_id: {type: bigint(8), notnull: true}
+    equipo_visitante_id: {type: bigint(8), notnull: true}
+    fecha_partido: {type: date, notnull: true}
+    comentarios: {type: string(250)}
+    figura_id: {type: bigint(8)}
+  relations:
+    Jugador: {type: one, local: creador_id, foreign: id}
+    Estado_Partido: {type: one, local: estado_partido_id, foreign: id}
+    Jugador_Partido: {type: one, local: figura_id, foreign: id}
+    Equipo_Partido: {type: one, local: equipo_local_id, foreign: id}
+    Equipo_Partido: {type: one, local: equipo_visitante_id, foreign: id}
+    
+Estado_Partido:
+  columns:
+    nombre: {type: string(30), notnull: true}
+    descripcion: {type: string(250)}
+    
+    
+Equipo_Partido:
+  columns:
+    nombre: {type: string(100), notnull: true}
+    tactica_id: {type: bigint(8), notnull: true}
+    capitan_id: {type: bigint(8)}
+  relations:
+    Tactica: {type: one, local: tactica_id, foreign: id}
+    Jugador_Partido: {type: one, local: capitan_id, foreign: id}
+    
+Tactica:
+  columns:
+    nombre: {type: string(30), notnull: true}
+    cantidad_jugadores: {type: int, notnull: true}
+    descripcion: {type: string(100)}
+    
+Jugador_Partido:
+  columns:
+    jugador_id: {type: bigint(8), notnull: true}
+    estado_jugador_id: {type: bigint(8), notnull: true}
+    dorsal: {type: int }
+    tactica_posicion_id: {type: bigint(8), notnull: true}
+    goles: {type: int}
+    amarillas: {type: int}
+    rojas: {type: int}
+    puntaje: {type: int}
+    comentario: {type: string(250)}
+  relations:
+    Estado_Jugador: {type: one, local: estado_jugador_id, foreign: id}
+    Tactica_Posicion: {type: one, local: tactica_posicion_id, foreign: id}
+    
+    
+Estado_Jugador:
+  columns:
+    nombre: {type: string(30), notnull: true}
+    descripcion: {type: string(250)}
+    
+    
+Jugador:
+  columns:
+    apellido: {type: string(100), notnull: true}
+    nombre: {type: string(100), notnull: true}
+    fecha_nacimiento: {type: date, notnull: true}
+    localidad_id: {type: bigint(8), notnull: true}
+    sexo: {type: string(1), notnull: true}
+    user_id: {type: bigint(8)}
+    apodo: {type: string(100)}
+    imagen: {type: string(100), default: 0.jpg}
+    dorsal: {type: int(3), default: 0}
+  relations:
+    Localidad: {type: many, local: localidad_id, foreign: id}
+    User: {type: one, class: sfGuardUser, foreign: id, local: user_id, foreignAlias: Profile }
+    
+Tactica_Posicion:
+  columns:
+    tactica_id: {type: bigint(8), notnull: true}
+    indice_tabla: {type: int, notnull: true}
+    posicion_id: {type: bigint(8), notnull: true}
+    dorsal: {type: int, notnull: true}
+    posicion_top_arriba: {type: int }
+    posicion_top_abajo: {type: int }
+    posicion_bottom_arriba: {type: int }
+    posicion_bottom_abajo: {type: int }
+  relations:
+    Tactica: {type: one, local: tactica_id, foreign: id}
+    Posicion: {type: one, local: posicion_id, foreign: id}
+    
+Posicion:
+  columns:
+    abreviatura: {type: string(3), notnull: true}
+    descripcion: {type: string(30), notnull: true}
+ 
+Localidad:
+   columns:
+     nombre: {type: string(50), notnull: true}
+     
+Historia:
+  actAs:
+    Timestampable: ~
+  columns:
+    sujeto_id: {type: bigint(8), notnull: true}
+    tipo_historia_id: {type: bigint(8), notnull: true}
+    param1: {type: bigint(8), notnull: true}
+    param2: {type: bigint(8), notnull: true}
+    param3: {type: bigint(8), notnull: true}
+    param4: {type: bigint(8), notnull: true}
+    param5: {type: bigint(8), notnull: true}
+  relations:
+    Jugador: {type: one, local: sujeto_id, foreign: id}
+    Tipo_Historia: {type: one, local: tipo_historia_id, foreign: id}
+    
+Tipo_Historia:
+  columns:
+    nombre: {type: string(50), notnull: true}
+    descripcion: {type: string(100)}
+     
+Publicacion:
+  actAs:
+    Timestampable: ~
+  columns:
+    jugador_id: {type: bigint(8), notnull: true}
+    contenido: {type: string(250)}
+  relations:
+    Jugador: {type: one, local: jugador_id, foreign: id}
+    
+Multimedia_Imagen:
+  columns:
+    publicacion_id: {type: bigint(8)}
+    imagen: {type: string(30), notnull: true}
+    pie: {type: string(250)}
+  relations:
+    Publicacion: {type: one, local: publicacion_id, foreign: id}
+    
+Multimedia_Video:
+  columns:
+    publicacion_id: {type: bigint(8)}
+    video: {type: string(30), notnull: true}
+    pie: {type: string(250)}
+  relations:
+    Publicacion: {type: one, local: publicacion_id, foreign: id}
+  

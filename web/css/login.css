@@ -1,0 +1,119 @@
+html { 
+	font-family: 'Istok Web', sans-serif;
+	}
+* {
+	margin: 0;
+  	padding: 0;
+}
+
+.clear{
+	clear:both;
+}
+
+#contenedorPaginaLogin{
+	margin: 0 auto;
+	width: 1024px;
+}
+
+#contenedorArribaLogin {
+	background-color: rgb(18,73,18);
+	color: #FFF;
+	width: 1024px;
+	height: 50px;
+	z-index: 10;
+	margin: auto;
+	float: right;
+}
+
+#contenedorArribaLogin form{
+	float: right;
+	font-size: 10px;
+	font-weight: bold;
+	width: 400px;
+}
+
+#contenedorArribaLogin form input{
+	margin-right: 2px;
+}
+
+#contenedorArribaLogin form input.entrarLogin {
+	-moz-box-shadow:inset 0px 1px 0px -41px #c1ed9c;
+	-webkit-box-shadow:inset 0px 1px 0px -41px #c1ed9c;
+	box-shadow:inset 0px 1px 0px -41px #c1ed9c;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7dff7d), color-stop(1, #2cb838) );
+	background:-moz-linear-gradient( center top, #7dff7d 5%, #2cb838 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7dff7d', endColorstr='#2cb838');
+	background-color:#7dff7d;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #12a81f;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:12px;
+	font-weight:bold;
+	padding:1px 6px;
+	text-decoration:none;
+	text-shadow:0px 0px 4px #242424;
+}
+
+#contenedorArribaLogin form input.entrarLogin:hover
+{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2cb838), color-stop(1, #7dff7d) );
+	background:-moz-linear-gradient( center top, #2cb838 5%, #7dff7d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2cb838', endColorstr='#7dff7d');
+	background-color:#2cb838;
+}
+
+#contenedorArribaLogin form input.entrarLogin:active 
+{
+	position:relative;
+	top:1px;
+}
+
+#contenedorIzquierdaLogin {
+	width: 400px;
+	height: 500px;
+	float: left;
+	background-color: rgb(18,73,18);
+	overflow: visible;
+	z-index: 4;
+}
+
+#contenedorDerechaLogin {
+	width: 624px;
+	height: 500px;
+	float: left;
+	background-color:#FFF;
+    background-image: -moz-linear-gradient(top, #FFF, #99CC99);
+    background-image: -webkit-gradient(linear, left top,left bottom, from(#FFF), to(#99CC99));
+    background-image: linear-gradient(top, #FFF, #99CC99);
+	z-index: 0;
+	}
+    
+#contenedorRegistro{
+    width: 300px;
+    float: right;
+    padding-right: 10px;
+    margin-top: -20px;
+}
+
+#contenedorAbajoLogin {
+	width: 1024px;
+	height: 50px;
+	background-color: #CCC;
+}
+
+#contenedorImagenLogo1{
+	width: 400px;
+	height: 163px;
+	background-image:url(../images/logoLogin1.png);
+	
+}
+
+#contenedorImagenLogo2{
+	width: 624px;
+	height: 163px;
+	background-image:url(../images/logoLogin2.png);
+}
