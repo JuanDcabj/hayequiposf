@@ -16,8 +16,9 @@ abstract class BaseJugador_PartidoForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                  => new sfWidgetFormInputHidden(),
-      'jugador_id'          => new sfWidgetFormInputText(),
+      'jugador_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Jugador'), 'add_empty' => false)),
       'estado_jugador_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Estado_Jugador'), 'add_empty' => false)),
+      'equipo_id'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Equipo_Partido'), 'add_empty' => false)),
       'dorsal'              => new sfWidgetFormInputText(),
       'tactica_posicion_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tactica_Posicion'), 'add_empty' => false)),
       'goles'               => new sfWidgetFormInputText(),
@@ -29,8 +30,9 @@ abstract class BaseJugador_PartidoForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'jugador_id'          => new sfValidatorPass(),
+      'jugador_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Jugador'))),
       'estado_jugador_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Estado_Jugador'))),
+      'equipo_id'           => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Equipo_Partido'))),
       'dorsal'              => new sfValidatorPass(array('required' => false)),
       'tactica_posicion_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tactica_Posicion'))),
       'goles'               => new sfValidatorPass(array('required' => false)),

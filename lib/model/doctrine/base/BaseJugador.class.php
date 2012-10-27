@@ -17,6 +17,7 @@
  * @property Doctrine_Collection $Localidad
  * @property sfGuardUser $User
  * @property Doctrine_Collection $Partido
+ * @property Doctrine_Collection $Jugador_Partido
  * @property Doctrine_Collection $Historia
  * @property Doctrine_Collection $Publicacion
  * 
@@ -32,6 +33,7 @@
  * @method Doctrine_Collection getLocalidad()        Returns the current record's "Localidad" collection
  * @method sfGuardUser         getUser()             Returns the current record's "User" value
  * @method Doctrine_Collection getPartido()          Returns the current record's "Partido" collection
+ * @method Doctrine_Collection getJugadorPartido()   Returns the current record's "Jugador_Partido" collection
  * @method Doctrine_Collection getHistoria()         Returns the current record's "Historia" collection
  * @method Doctrine_Collection getPublicacion()      Returns the current record's "Publicacion" collection
  * @method Jugador             setApellido()         Sets the current record's "apellido" value
@@ -46,6 +48,7 @@
  * @method Jugador             setLocalidad()        Sets the current record's "Localidad" collection
  * @method Jugador             setUser()             Sets the current record's "User" value
  * @method Jugador             setPartido()          Sets the current record's "Partido" collection
+ * @method Jugador             setJugadorPartido()   Sets the current record's "Jugador_Partido" collection
  * @method Jugador             setHistoria()         Sets the current record's "Historia" collection
  * @method Jugador             setPublicacion()      Sets the current record's "Publicacion" collection
  * 
@@ -117,6 +120,10 @@ abstract class BaseJugador extends sfDoctrineRecord
         $this->hasMany('Partido', array(
              'local' => 'id',
              'foreign' => 'creador_id'));
+
+        $this->hasMany('Jugador_Partido', array(
+             'local' => 'id',
+             'foreign' => 'jugador_id'));
 
         $this->hasMany('Historia', array(
              'local' => 'id',

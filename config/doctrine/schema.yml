@@ -22,11 +22,9 @@ Equipo_Partido:
     nombre: {type: string(100), notnull: true}
     partido_id: {type: bigint(8), notnull: true}
     tactica_id: {type: bigint(8), notnull: true}
-    capitan_id: {type: bigint(8)}
   relations:
     Tactica: {type: one, local: tactica_id, foreign: id}
-    Jugador_Partido: {type: one, local: capitan_id, foreign: id}
-    Partido: {type: many, local: partido_id, foreign: id, foreignAlias: Equipos}
+    Partido: {type: one, local: partido_id, foreign: id, foreignAlias: Equipos}
     
 Tactica:
   columns:
@@ -38,6 +36,7 @@ Jugador_Partido:
   columns:
     jugador_id: {type: bigint(8), notnull: true}
     estado_jugador_id: {type: bigint(8), notnull: true}
+    equipo_id: {type: bigint(8), notnull: true}
     dorsal: {type: int }
     tactica_posicion_id: {type: bigint(8), notnull: true}
     goles: {type: int}
@@ -48,6 +47,8 @@ Jugador_Partido:
   relations:
     Estado_Jugador: {type: one, local: estado_jugador_id, foreign: id}
     Tactica_Posicion: {type: one, local: tactica_posicion_id, foreign: id}
+    Equipo_Partido: {type: one, local: equipo_id, foreign: id, foreignAlias: Jugadores }
+    Jugador: {type: one, local: jugador_id, foreign: id}
     
     
 Estado_Jugador:

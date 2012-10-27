@@ -19,7 +19,6 @@ abstract class BaseEquipo_PartidoForm extends BaseFormDoctrine
       'nombre'     => new sfWidgetFormInputText(),
       'partido_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Partido'), 'add_empty' => false)),
       'tactica_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tactica'), 'add_empty' => false)),
-      'capitan_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Jugador_Partido'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
@@ -27,7 +26,6 @@ abstract class BaseEquipo_PartidoForm extends BaseFormDoctrine
       'nombre'     => new sfValidatorString(array('max_length' => 100)),
       'partido_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Partido'))),
       'tactica_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tactica'))),
-      'capitan_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Jugador_Partido'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('equipo_partido[%s]');

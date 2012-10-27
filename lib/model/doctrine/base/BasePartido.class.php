@@ -14,28 +14,28 @@
  * @property Jugador $Jugador
  * @property Estado_Partido $Estado_Partido
  * @property Jugador_Partido $Jugador_Partido
- * @property Equipo_Partido $Equipos
+ * @property Doctrine_Collection $Equipos
  * 
- * @method bigint          getCreadorId()         Returns the current record's "creador_id" value
- * @method date            getFechaCreado()       Returns the current record's "fecha_creado" value
- * @method bigint          getEstadoPartidoId()   Returns the current record's "estado_partido_id" value
- * @method date            getFechaPartido()      Returns the current record's "fecha_partido" value
- * @method string          getComentarios()       Returns the current record's "comentarios" value
- * @method bigint          getFiguraId()          Returns the current record's "figura_id" value
- * @method Jugador         getJugador()           Returns the current record's "Jugador" value
- * @method Estado_Partido  getEstadoPartido()     Returns the current record's "Estado_Partido" value
- * @method Jugador_Partido getJugadorPartido()    Returns the current record's "Jugador_Partido" value
- * @method Equipo_Partido  getEquipos()           Returns the current record's "Equipos" value
- * @method Partido         setCreadorId()         Sets the current record's "creador_id" value
- * @method Partido         setFechaCreado()       Sets the current record's "fecha_creado" value
- * @method Partido         setEstadoPartidoId()   Sets the current record's "estado_partido_id" value
- * @method Partido         setFechaPartido()      Sets the current record's "fecha_partido" value
- * @method Partido         setComentarios()       Sets the current record's "comentarios" value
- * @method Partido         setFiguraId()          Sets the current record's "figura_id" value
- * @method Partido         setJugador()           Sets the current record's "Jugador" value
- * @method Partido         setEstadoPartido()     Sets the current record's "Estado_Partido" value
- * @method Partido         setJugadorPartido()    Sets the current record's "Jugador_Partido" value
- * @method Partido         setEquipos()           Sets the current record's "Equipos" value
+ * @method bigint              getCreadorId()         Returns the current record's "creador_id" value
+ * @method date                getFechaCreado()       Returns the current record's "fecha_creado" value
+ * @method bigint              getEstadoPartidoId()   Returns the current record's "estado_partido_id" value
+ * @method date                getFechaPartido()      Returns the current record's "fecha_partido" value
+ * @method string              getComentarios()       Returns the current record's "comentarios" value
+ * @method bigint              getFiguraId()          Returns the current record's "figura_id" value
+ * @method Jugador             getJugador()           Returns the current record's "Jugador" value
+ * @method Estado_Partido      getEstadoPartido()     Returns the current record's "Estado_Partido" value
+ * @method Jugador_Partido     getJugadorPartido()    Returns the current record's "Jugador_Partido" value
+ * @method Doctrine_Collection getEquipos()           Returns the current record's "Equipos" collection
+ * @method Partido             setCreadorId()         Sets the current record's "creador_id" value
+ * @method Partido             setFechaCreado()       Sets the current record's "fecha_creado" value
+ * @method Partido             setEstadoPartidoId()   Sets the current record's "estado_partido_id" value
+ * @method Partido             setFechaPartido()      Sets the current record's "fecha_partido" value
+ * @method Partido             setComentarios()       Sets the current record's "comentarios" value
+ * @method Partido             setFiguraId()          Sets the current record's "figura_id" value
+ * @method Partido             setJugador()           Sets the current record's "Jugador" value
+ * @method Partido             setEstadoPartido()     Sets the current record's "Estado_Partido" value
+ * @method Partido             setJugadorPartido()    Sets the current record's "Jugador_Partido" value
+ * @method Partido             setEquipos()           Sets the current record's "Equipos" collection
  * 
  * @package    hayequiposf
  * @subpackage model
@@ -90,7 +90,7 @@ abstract class BasePartido extends sfDoctrineRecord
              'local' => 'figura_id',
              'foreign' => 'id'));
 
-        $this->hasOne('Equipo_Partido as Equipos', array(
+        $this->hasMany('Equipo_Partido as Equipos', array(
              'local' => 'id',
              'foreign' => 'partido_id'));
     }

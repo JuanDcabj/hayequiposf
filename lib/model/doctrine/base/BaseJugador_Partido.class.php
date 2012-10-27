@@ -7,6 +7,7 @@
  * 
  * @property bigint $jugador_id
  * @property bigint $estado_jugador_id
+ * @property bigint $equipo_id
  * @property int $dorsal
  * @property bigint $tactica_posicion_id
  * @property int $goles
@@ -16,11 +17,13 @@
  * @property string $comentario
  * @property Estado_Jugador $Estado_Jugador
  * @property Tactica_Posicion $Tactica_Posicion
+ * @property Equipo_Partido $Equipo_Partido
+ * @property Jugador $Jugador
  * @property Doctrine_Collection $Partido
- * @property Doctrine_Collection $Equipo_Partido
  * 
  * @method bigint              getJugadorId()           Returns the current record's "jugador_id" value
  * @method bigint              getEstadoJugadorId()     Returns the current record's "estado_jugador_id" value
+ * @method bigint              getEquipoId()            Returns the current record's "equipo_id" value
  * @method int                 getDorsal()              Returns the current record's "dorsal" value
  * @method bigint              getTacticaPosicionId()   Returns the current record's "tactica_posicion_id" value
  * @method int                 getGoles()               Returns the current record's "goles" value
@@ -30,10 +33,12 @@
  * @method string              getComentario()          Returns the current record's "comentario" value
  * @method Estado_Jugador      getEstadoJugador()       Returns the current record's "Estado_Jugador" value
  * @method Tactica_Posicion    getTacticaPosicion()     Returns the current record's "Tactica_Posicion" value
+ * @method Equipo_Partido      getEquipoPartido()       Returns the current record's "Equipo_Partido" value
+ * @method Jugador             getJugador()             Returns the current record's "Jugador" value
  * @method Doctrine_Collection getPartido()             Returns the current record's "Partido" collection
- * @method Doctrine_Collection getEquipoPartido()       Returns the current record's "Equipo_Partido" collection
  * @method Jugador_Partido     setJugadorId()           Sets the current record's "jugador_id" value
  * @method Jugador_Partido     setEstadoJugadorId()     Sets the current record's "estado_jugador_id" value
+ * @method Jugador_Partido     setEquipoId()            Sets the current record's "equipo_id" value
  * @method Jugador_Partido     setDorsal()              Sets the current record's "dorsal" value
  * @method Jugador_Partido     setTacticaPosicionId()   Sets the current record's "tactica_posicion_id" value
  * @method Jugador_Partido     setGoles()               Sets the current record's "goles" value
@@ -43,8 +48,9 @@
  * @method Jugador_Partido     setComentario()          Sets the current record's "comentario" value
  * @method Jugador_Partido     setEstadoJugador()       Sets the current record's "Estado_Jugador" value
  * @method Jugador_Partido     setTacticaPosicion()     Sets the current record's "Tactica_Posicion" value
+ * @method Jugador_Partido     setEquipoPartido()       Sets the current record's "Equipo_Partido" value
+ * @method Jugador_Partido     setJugador()             Sets the current record's "Jugador" value
  * @method Jugador_Partido     setPartido()             Sets the current record's "Partido" collection
- * @method Jugador_Partido     setEquipoPartido()       Sets the current record's "Equipo_Partido" collection
  * 
  * @package    hayequiposf
  * @subpackage model
@@ -62,6 +68,11 @@ abstract class BaseJugador_Partido extends sfDoctrineRecord
              'length' => 8,
              ));
         $this->hasColumn('estado_jugador_id', 'bigint', 8, array(
+             'type' => 'bigint',
+             'notnull' => true,
+             'length' => 8,
+             ));
+        $this->hasColumn('equipo_id', 'bigint', 8, array(
              'type' => 'bigint',
              'notnull' => true,
              'length' => 8,
@@ -103,12 +114,16 @@ abstract class BaseJugador_Partido extends sfDoctrineRecord
              'local' => 'tactica_posicion_id',
              'foreign' => 'id'));
 
+        $this->hasOne('Equipo_Partido', array(
+             'local' => 'equipo_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('Jugador', array(
+             'local' => 'jugador_id',
+             'foreign' => 'id'));
+
         $this->hasMany('Partido', array(
              'local' => 'id',
              'foreign' => 'figura_id'));
-
-        $this->hasMany('Equipo_Partido', array(
-             'local' => 'id',
-             'foreign' => 'capitan_id'));
     }
 }

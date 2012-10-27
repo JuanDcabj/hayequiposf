@@ -13,8 +13,9 @@ abstract class BaseJugador_PartidoFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'jugador_id'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'jugador_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Jugador'), 'add_empty' => true)),
       'estado_jugador_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Estado_Jugador'), 'add_empty' => true)),
+      'equipo_id'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Equipo_Partido'), 'add_empty' => true)),
       'dorsal'              => new sfWidgetFormFilterInput(),
       'tactica_posicion_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tactica_Posicion'), 'add_empty' => true)),
       'goles'               => new sfWidgetFormFilterInput(),
@@ -25,8 +26,9 @@ abstract class BaseJugador_PartidoFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
-      'jugador_id'          => new sfValidatorPass(array('required' => false)),
+      'jugador_id'          => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Jugador'), 'column' => 'id')),
       'estado_jugador_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Estado_Jugador'), 'column' => 'id')),
+      'equipo_id'           => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Equipo_Partido'), 'column' => 'id')),
       'dorsal'              => new sfValidatorPass(array('required' => false)),
       'tactica_posicion_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tactica_Posicion'), 'column' => 'id')),
       'goles'               => new sfValidatorPass(array('required' => false)),
@@ -54,8 +56,9 @@ abstract class BaseJugador_PartidoFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                  => 'Number',
-      'jugador_id'          => 'Text',
+      'jugador_id'          => 'ForeignKey',
       'estado_jugador_id'   => 'ForeignKey',
+      'equipo_id'           => 'ForeignKey',
       'dorsal'              => 'Text',
       'tactica_posicion_id' => 'ForeignKey',
       'goles'               => 'Text',
