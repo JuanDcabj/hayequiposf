@@ -20,7 +20,7 @@ class HistoriaTable extends Doctrine_Table
     public static function getUltimas()
     {
         $ultimas = Doctrine_Query::create()
-                ->select('h.id, h.tipo_historia_id')
+                ->select('h.id,h.tipo_historia_id,h.param1')
                 ->from('Historia h')
                 ->orderBy('h.updated_at DESC')
                 ->limit(20)

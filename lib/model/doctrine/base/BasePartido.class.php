@@ -8,40 +8,34 @@
  * @property bigint $creador_id
  * @property date $fecha_creado
  * @property bigint $estado_partido_id
- * @property bigint $equipo_local_id
- * @property bigint $equipo_visitante_id
  * @property date $fecha_partido
  * @property string $comentarios
  * @property bigint $figura_id
  * @property Jugador $Jugador
  * @property Estado_Partido $Estado_Partido
  * @property Jugador_Partido $Jugador_Partido
- * @property Equipo_Partido $Equipo_Partido
+ * @property Equipo_Partido $Equipos
  * 
- * @method bigint          getCreadorId()           Returns the current record's "creador_id" value
- * @method date            getFechaCreado()         Returns the current record's "fecha_creado" value
- * @method bigint          getEstadoPartidoId()     Returns the current record's "estado_partido_id" value
- * @method bigint          getEquipoLocalId()       Returns the current record's "equipo_local_id" value
- * @method bigint          getEquipoVisitanteId()   Returns the current record's "equipo_visitante_id" value
- * @method date            getFechaPartido()        Returns the current record's "fecha_partido" value
- * @method string          getComentarios()         Returns the current record's "comentarios" value
- * @method bigint          getFiguraId()            Returns the current record's "figura_id" value
- * @method Jugador         getJugador()             Returns the current record's "Jugador" value
- * @method Estado_Partido  getEstadoPartido()       Returns the current record's "Estado_Partido" value
- * @method Jugador_Partido getJugadorPartido()      Returns the current record's "Jugador_Partido" value
- * @method Equipo_Partido  getEquipoPartido()       Returns the current record's "Equipo_Partido" value
- * @method Partido         setCreadorId()           Sets the current record's "creador_id" value
- * @method Partido         setFechaCreado()         Sets the current record's "fecha_creado" value
- * @method Partido         setEstadoPartidoId()     Sets the current record's "estado_partido_id" value
- * @method Partido         setEquipoLocalId()       Sets the current record's "equipo_local_id" value
- * @method Partido         setEquipoVisitanteId()   Sets the current record's "equipo_visitante_id" value
- * @method Partido         setFechaPartido()        Sets the current record's "fecha_partido" value
- * @method Partido         setComentarios()         Sets the current record's "comentarios" value
- * @method Partido         setFiguraId()            Sets the current record's "figura_id" value
- * @method Partido         setJugador()             Sets the current record's "Jugador" value
- * @method Partido         setEstadoPartido()       Sets the current record's "Estado_Partido" value
- * @method Partido         setJugadorPartido()      Sets the current record's "Jugador_Partido" value
- * @method Partido         setEquipoPartido()       Sets the current record's "Equipo_Partido" value
+ * @method bigint          getCreadorId()         Returns the current record's "creador_id" value
+ * @method date            getFechaCreado()       Returns the current record's "fecha_creado" value
+ * @method bigint          getEstadoPartidoId()   Returns the current record's "estado_partido_id" value
+ * @method date            getFechaPartido()      Returns the current record's "fecha_partido" value
+ * @method string          getComentarios()       Returns the current record's "comentarios" value
+ * @method bigint          getFiguraId()          Returns the current record's "figura_id" value
+ * @method Jugador         getJugador()           Returns the current record's "Jugador" value
+ * @method Estado_Partido  getEstadoPartido()     Returns the current record's "Estado_Partido" value
+ * @method Jugador_Partido getJugadorPartido()    Returns the current record's "Jugador_Partido" value
+ * @method Equipo_Partido  getEquipos()           Returns the current record's "Equipos" value
+ * @method Partido         setCreadorId()         Sets the current record's "creador_id" value
+ * @method Partido         setFechaCreado()       Sets the current record's "fecha_creado" value
+ * @method Partido         setEstadoPartidoId()   Sets the current record's "estado_partido_id" value
+ * @method Partido         setFechaPartido()      Sets the current record's "fecha_partido" value
+ * @method Partido         setComentarios()       Sets the current record's "comentarios" value
+ * @method Partido         setFiguraId()          Sets the current record's "figura_id" value
+ * @method Partido         setJugador()           Sets the current record's "Jugador" value
+ * @method Partido         setEstadoPartido()     Sets the current record's "Estado_Partido" value
+ * @method Partido         setJugadorPartido()    Sets the current record's "Jugador_Partido" value
+ * @method Partido         setEquipos()           Sets the current record's "Equipos" value
  * 
  * @package    hayequiposf
  * @subpackage model
@@ -63,16 +57,6 @@ abstract class BasePartido extends sfDoctrineRecord
              'notnull' => true,
              ));
         $this->hasColumn('estado_partido_id', 'bigint', 8, array(
-             'type' => 'bigint',
-             'notnull' => true,
-             'length' => 8,
-             ));
-        $this->hasColumn('equipo_local_id', 'bigint', 8, array(
-             'type' => 'bigint',
-             'notnull' => true,
-             'length' => 8,
-             ));
-        $this->hasColumn('equipo_visitante_id', 'bigint', 8, array(
              'type' => 'bigint',
              'notnull' => true,
              'length' => 8,
@@ -106,8 +90,8 @@ abstract class BasePartido extends sfDoctrineRecord
              'local' => 'figura_id',
              'foreign' => 'id'));
 
-        $this->hasOne('Equipo_Partido', array(
-             'local' => 'equipo_visitante_id',
-             'foreign' => 'id'));
+        $this->hasOne('Equipo_Partido as Equipos', array(
+             'local' => 'id',
+             'foreign' => 'partido_id'));
     }
 }

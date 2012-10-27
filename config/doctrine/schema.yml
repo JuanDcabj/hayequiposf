@@ -3,8 +3,6 @@ Partido:
     creador_id: {type: bigint(8), notnull: true}
     fecha_creado: {type: date, notnull: true}
     estado_partido_id: {type: bigint(8), notnull: true}
-    equipo_local_id: {type: bigint(8), notnull: true}
-    equipo_visitante_id: {type: bigint(8), notnull: true}
     fecha_partido: {type: date, notnull: true}
     comentarios: {type: string(250)}
     figura_id: {type: bigint(8)}
@@ -12,8 +10,6 @@ Partido:
     Jugador: {type: one, local: creador_id, foreign: id}
     Estado_Partido: {type: one, local: estado_partido_id, foreign: id}
     Jugador_Partido: {type: one, local: figura_id, foreign: id}
-    Equipo_Partido: {type: one, local: equipo_local_id, foreign: id}
-    Equipo_Partido: {type: one, local: equipo_visitante_id, foreign: id}
     
 Estado_Partido:
   columns:
@@ -24,11 +20,13 @@ Estado_Partido:
 Equipo_Partido:
   columns:
     nombre: {type: string(100), notnull: true}
+    partido_id: {type: bigint(8), notnull: true}
     tactica_id: {type: bigint(8), notnull: true}
     capitan_id: {type: bigint(8)}
   relations:
     Tactica: {type: one, local: tactica_id, foreign: id}
     Jugador_Partido: {type: one, local: capitan_id, foreign: id}
+    Partido: {type: many, local: partido_id, foreign: id, foreignAlias: Equipos}
     
 Tactica:
   columns:

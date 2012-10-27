@@ -14,12 +14,14 @@ abstract class BaseEquipo_PartidoFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'nombre'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'partido_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Partido'), 'add_empty' => true)),
       'tactica_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tactica'), 'add_empty' => true)),
       'capitan_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Jugador_Partido'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'nombre'     => new sfValidatorPass(array('required' => false)),
+      'partido_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Partido'), 'column' => 'id')),
       'tactica_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tactica'), 'column' => 'id')),
       'capitan_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Jugador_Partido'), 'column' => 'id')),
     ));
@@ -43,6 +45,7 @@ abstract class BaseEquipo_PartidoFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'         => 'Number',
       'nombre'     => 'Text',
+      'partido_id' => 'ForeignKey',
       'tactica_id' => 'ForeignKey',
       'capitan_id' => 'ForeignKey',
     );

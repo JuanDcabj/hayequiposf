@@ -7963,3 +7963,311 @@ Oct 26 17:14:29 symfony [info] {sfWebDebugLogger} View "Success" for "club/index
 Oct 26 17:14:29 symfony [info] {sfWebDebugLogger} Partial "club/_publicacion" 19.68 ms (1)
 Oct 26 17:14:29 symfony [info] {sfWebDebugLogger} Partial "club/_usuario" 3.29 ms (1)
 Oct 26 17:14:30 symfony [info] {sfWebResponse} Send content (50399 o)
+Oct 26 23:01:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:01:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:01:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:01:21 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:01:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:01:21 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:01:21 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:01:21 symfony [info] {sfBasicSecurityFilter} Action "club/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Oct 26 23:01:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:01:21 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:01:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:01:21 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Oct 26 23:01:21 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/sfGuardAuth/templates/signinSuccess.php"
+Oct 26 23:01:21 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/sfGuardAuth/templates/_signin_form.php"
+Oct 26 23:01:21 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/sfGuardRegister/templates/_register_form.php"
+Oct 26 23:01:21 symfony [info] {main} Set slot "register"
+Oct 26 23:01:21 symfony [info] {sfPHPView} Decorate content with "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layoutlogin.php"
+Oct 26 23:01:21 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layoutlogin.php"
+Oct 26 23:01:21 symfony [info] {main} Get slot "register"
+Oct 26 23:01:21 symfony [err] {Doctrine_Connection_Exception} PDO Connection Error: SQLSTATE[HY000] [1049] Unknown database 'hayequipo'
+Oct 26 23:01:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Oct 26 23:01:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 26 23:01:21 symfony [info] {sfWebDebugLogger} Configuration 87.76 ms (13)
+Oct 26 23:01:21 symfony [info] {sfWebDebugLogger} Factories 183.28 ms (1)
+Oct 26 23:01:21 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 20.00 ms (1)
+Oct 26 23:01:21 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 206.16 ms (1)
+Oct 26 23:01:21 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 5.98 ms (1)
+Oct 26 23:01:21 symfony [info] {sfWebDebugLogger} Partial "sfGuardRegister/_register_form" 167.32 ms (1)
+Oct 26 23:05:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:05:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:05:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:05:00 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:05:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:05:00 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:05:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:05:00 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:05:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:05:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:05:00 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.jugador_id AS p__jugador_id, p.contenido AS p__contenido, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM publicacion p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:05:00 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_publicacion.php"
+Oct 26 23:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 26 23:05:00 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 26 23:05:00 symfony [info] {sfPHPView} Decorate content with "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 26 23:05:00 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 26 23:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Oct 26 23:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.user_id IN (?)) - (1)
+Oct 26 23:05:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 26 23:05:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 26 23:05:00 symfony [info] {sfWebDebugLogger} Configuration 38.88 ms (10)
+Oct 26 23:05:00 symfony [info] {sfWebDebugLogger} Factories 67.14 ms (1)
+Oct 26 23:05:00 symfony [info] {sfWebDebugLogger} Action "club/index" 54.89 ms (1)
+Oct 26 23:05:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (6)
+Oct 26 23:05:00 symfony [info] {sfWebDebugLogger} View "Success" for "club/index" 79.29 ms (1)
+Oct 26 23:05:00 symfony [info] {sfWebDebugLogger} Partial "club/_publicacion" 17.73 ms (1)
+Oct 26 23:05:00 symfony [info] {sfWebDebugLogger} Partial "club/_usuario" 3.18 ms (1)
+Oct 26 23:05:00 symfony [info] {sfWebResponse} Send content (50418 o)
+Oct 26 23:33:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:33:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:33:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:33:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:33:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:33:16 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:33:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:33:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:33:16 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:33:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:33:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:33:16 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:33:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\Trabajos\Webs\hayequiposf\lib\vendor\symfony-1.4.18\lib\escaper\sfOutputEscaperArrayDecorator.class.php on line 119 (Undefined index: param1)
+Oct 26 23:33:16 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_publicacion.php"
+Oct 26 23:34:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:34:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:34:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:34:02 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:34:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:34:02 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:34:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:34:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:34:02 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:34:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:34:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.sujeto_id AS h__sujeto_id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1, h.param2 AS h__param2, h.param3 AS h__param3, h.param4 AS h__param4, h.param5 AS h__param5, h.created_at AS h__created_at, h.updated_at AS h__updated_at FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:34:02 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:34:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.jugador_id AS p__jugador_id, p.contenido AS p__contenido, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM publicacion p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:34:02 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_publicacion.php"
+Oct 26 23:34:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 26 23:34:02 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 26 23:34:02 symfony [info] {sfPHPView} Decorate content with "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 26 23:34:02 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 26 23:34:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Oct 26 23:34:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.user_id IN (?)) - (1)
+Oct 26 23:34:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 26 23:34:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 26 23:34:02 symfony [info] {sfWebDebugLogger} Configuration 19.41 ms (9)
+Oct 26 23:34:02 symfony [info] {sfWebDebugLogger} Factories 82.76 ms (1)
+Oct 26 23:34:02 symfony [info] {sfWebDebugLogger} Action "club/index" 83.30 ms (1)
+Oct 26 23:34:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (6)
+Oct 26 23:34:02 symfony [info] {sfWebDebugLogger} View "Success" for "club/index" 99.04 ms (1)
+Oct 26 23:34:02 symfony [info] {sfWebDebugLogger} Partial "club/_publicacion" 19.47 ms (1)
+Oct 26 23:34:02 symfony [info] {sfWebDebugLogger} Partial "club/_usuario" 3.35 ms (1)
+Oct 26 23:34:02 symfony [info] {sfWebResponse} Send content (51484 o)
+Oct 26 23:35:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:35:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:35:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:35:23 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:35:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:35:23 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:35:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:35:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:35:23 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:35:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:35:23 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:35:24 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:35:24 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.jugador_id AS p__jugador_id, p.contenido AS p__contenido, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM publicacion p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:35:24 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_publicacion.php"
+Oct 26 23:35:24 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 26 23:35:24 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 26 23:35:24 symfony [info] {sfPHPView} Decorate content with "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 26 23:35:24 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 26 23:35:24 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Oct 26 23:35:24 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.user_id IN (?)) - (1)
+Oct 26 23:35:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 26 23:35:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 26 23:35:24 symfony [info] {sfWebDebugLogger} Configuration 14.78 ms (9)
+Oct 26 23:35:24 symfony [info] {sfWebDebugLogger} Factories 79.90 ms (1)
+Oct 26 23:35:24 symfony [info] {sfWebDebugLogger} Action "club/index" 69.01 ms (1)
+Oct 26 23:35:24 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (6)
+Oct 26 23:35:24 symfony [info] {sfWebDebugLogger} View "Success" for "club/index" 98.32 ms (1)
+Oct 26 23:35:24 symfony [info] {sfWebDebugLogger} Partial "club/_publicacion" 23.37 ms (1)
+Oct 26 23:35:24 symfony [info] {sfWebDebugLogger} Partial "club/_usuario" 4.37 ms (1)
+Oct 26 23:35:24 symfony [info] {sfWebResponse} Send content (50572 o)
+Oct 26 23:47:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:47:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:47:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:47:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:47:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:47:16 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:47:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:47:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:47:16 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:47:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:47:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:47:16 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:47:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.creador_id AS p__creador_id, p.fecha_creado AS p__fecha_creado, p.estado_partido_id AS p__estado_partido_id, p.equipo_local_id AS p__equipo_local_id, p.equipo_visitante_id AS p__equipo_visitante_id, p.fecha_partido AS p__fecha_partido, p.comentarios AS p__comentarios, p.figura_id AS p__figura_id FROM partido p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:47:16 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_partido_iniciado.php"
+Oct 26 23:47:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\Trabajos\Webs\hayequiposf\apps\frontend\modules\club\templates\_partido_iniciado.php on line 5 (Undefined variable: publicacion)
+Oct 26 23:48:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:48:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:48:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:48:00 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:48:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:48:00 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:48:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:48:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:48:00 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:48:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:48:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:48:00 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:48:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.creador_id AS p__creador_id, p.fecha_creado AS p__fecha_creado, p.estado_partido_id AS p__estado_partido_id, p.equipo_local_id AS p__equipo_local_id, p.equipo_visitante_id AS p__equipo_visitante_id, p.fecha_partido AS p__fecha_partido, p.comentarios AS p__comentarios, p.figura_id AS p__figura_id FROM partido p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:48:00 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_partido_iniciado.php"
+Oct 26 23:48:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 26 23:48:00 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 26 23:48:00 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "created_at" on "Partido"
+Oct 26 23:48:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 26 23:48:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 26 23:48:01 symfony [info] {sfWebDebugLogger} Configuration 15.16 ms (9)
+Oct 26 23:48:01 symfony [info] {sfWebDebugLogger} Factories 73.80 ms (1)
+Oct 26 23:48:01 symfony [info] {sfWebDebugLogger} Action "club/index" 60.94 ms (1)
+Oct 26 23:48:01 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (4)
+Oct 26 23:48:01 symfony [info] {sfWebDebugLogger} View "Success" for "club/index" 196.27 ms (1)
+Oct 26 23:48:01 symfony [info] {sfWebDebugLogger} Partial "club/_partido_iniciado" 148.88 ms (1)
+Oct 26 23:48:01 symfony [info] {sfWebDebugLogger} Partial "club/_usuario" 2.92 ms (1)
+Oct 26 23:50:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:50:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:50:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:50:49 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:50:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:50:49 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:50:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:50:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:50:49 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:50:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:50:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:50:49 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:50:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.creador_id AS p__creador_id, p.fecha_creado AS p__fecha_creado, p.estado_partido_id AS p__estado_partido_id, p.equipo_local_id AS p__equipo_local_id, p.equipo_visitante_id AS p__equipo_visitante_id, p.fecha_partido AS p__fecha_partido, p.comentarios AS p__comentarios, p.figura_id AS p__figura_id FROM partido p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:50:49 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_partido_iniciado.php"
+Oct 26 23:50:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 26 23:50:49 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 26 23:50:49 symfony [notice] {sfWebDebugLogger}  Notice at D:\Trabajos\Webs\hayequiposf\apps\frontend\modules\club\templates\_partido_iniciado.php on line 9 (Undefined variable: publicacion)
+Oct 26 23:51:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:51:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:51:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:51:25 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:51:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:51:25 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:51:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:51:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:51:25 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:51:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:51:25 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:51:25 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:51:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.creador_id AS p__creador_id, p.fecha_creado AS p__fecha_creado, p.estado_partido_id AS p__estado_partido_id, p.equipo_local_id AS p__equipo_local_id, p.equipo_visitante_id AS p__equipo_visitante_id, p.fecha_partido AS p__fecha_partido, p.comentarios AS p__comentarios, p.figura_id AS p__figura_id FROM partido p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:51:25 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_partido_iniciado.php"
+Oct 26 23:51:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 26 23:51:25 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 26 23:51:25 symfony [notice] {sfWebDebugLogger}  Notice at D:\Trabajos\Webs\hayequiposf\apps\frontend\modules\club\templates\_partido_iniciado.php on line 14 (Undefined variable: publicacion)
+Oct 26 23:51:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 26 23:51:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 26 23:51:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 26 23:51:43 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 26 23:51:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 26 23:51:43 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 26 23:51:43 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 26 23:51:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 26 23:51:43 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 26 23:51:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 26 23:51:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 26 23:51:43 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 26 23:51:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.creador_id AS p__creador_id, p.fecha_creado AS p__fecha_creado, p.estado_partido_id AS p__estado_partido_id, p.equipo_local_id AS p__equipo_local_id, p.equipo_visitante_id AS p__equipo_visitante_id, p.fecha_partido AS p__fecha_partido, p.comentarios AS p__comentarios, p.figura_id AS p__figura_id FROM partido p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:51:43 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_partido_iniciado.php"
+Oct 26 23:51:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 26 23:51:43 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 26 23:51:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.jugador_id AS p__jugador_id, p.contenido AS p__contenido, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM publicacion p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 26 23:51:43 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_publicacion.php"
+Oct 26 23:51:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 26 23:51:43 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 26 23:51:43 symfony [info] {sfPHPView} Decorate content with "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 26 23:51:43 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 26 23:51:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Oct 26 23:51:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.user_id IN (?)) - (1)
+Oct 26 23:51:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 26 23:51:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 26 23:51:43 symfony [info] {sfWebDebugLogger} Configuration 18.96 ms (9)
+Oct 26 23:51:43 symfony [info] {sfWebDebugLogger} Factories 77.06 ms (1)
+Oct 26 23:51:43 symfony [info] {sfWebDebugLogger} Action "club/index" 68.08 ms (1)
+Oct 26 23:51:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (8)
+Oct 26 23:51:43 symfony [info] {sfWebDebugLogger} View "Success" for "club/index" 163.54 ms (1)
+Oct 26 23:51:43 symfony [info] {sfWebDebugLogger} Partial "club/_partido_iniciado" 20.40 ms (1)
+Oct 26 23:51:43 symfony [info] {sfWebDebugLogger} Partial "club/_usuario" 8.36 ms (2)
+Oct 26 23:51:43 symfony [info] {sfWebDebugLogger} Partial "club/_publicacion" 19.63 ms (1)
+Oct 26 23:51:43 symfony [info] {sfWebResponse} Send content (58065 o)
+Oct 27 00:05:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 27 00:05:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 27 00:05:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 27 00:05:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 27 00:05:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 27 00:05:34 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 27 00:05:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 27 00:05:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 27 00:05:34 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 27 00:05:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 27 00:05:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 27 00:05:34 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 27 00:05:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.creador_id AS p__creador_id, p.fecha_creado AS p__fecha_creado, p.estado_partido_id AS p__estado_partido_id, p.equipo_local_id AS p__equipo_local_id, p.equipo_visitante_id AS p__equipo_visitante_id, p.fecha_partido AS p__fecha_partido, p.comentarios AS p__comentarios, p.figura_id AS p__figura_id FROM partido p WHERE (p.id = ?) LIMIT 1 - (1)
+Oct 27 00:05:34 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_partido_iniciado.php"
+Oct 27 00:05:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.id = ?) - (1)
+Oct 27 00:05:34 symfony [info] {sfPartialView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/_usuario.php"
+Oct 27 00:05:34 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "equipo_visitante" on "Partido"
+Oct 27 00:05:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 27 00:05:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 27 00:05:34 symfony [info] {sfWebDebugLogger} Configuration 15.53 ms (9)
+Oct 27 00:05:34 symfony [info] {sfWebDebugLogger} Factories 122.94 ms (1)
+Oct 27 00:05:34 symfony [info] {sfWebDebugLogger} Action "club/index" 129.19 ms (1)
+Oct 27 00:05:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (4)
+Oct 27 00:05:34 symfony [info] {sfWebDebugLogger} View "Success" for "club/index" 189.90 ms (1)
+Oct 27 00:05:34 symfony [info] {sfWebDebugLogger} Partial "club/_partido_iniciado" 136.89 ms (1)
+Oct 27 00:05:34 symfony [info] {sfWebDebugLogger} Partial "club/_usuario" 2.76 ms (1)
+Oct 27 00:17:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 27 00:17:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 27 00:17:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 27 00:17:52 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 27 00:17:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 27 00:17:52 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 27 00:17:52 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 27 00:17:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 27 00:17:52 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 27 00:17:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 27 00:17:52 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 27 00:17:52 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 27 00:17:52 symfony [info] {sfPHPView} Decorate content with "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 27 00:17:52 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 27 00:17:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Oct 27 00:17:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.user_id IN (?)) - (1)
+Oct 27 00:18:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Oct 27 00:18:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Oct 27 00:18:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Oct 27 00:18:39 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'club',  'action' => 'index',)
+Oct 27 00:18:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 27 00:18:39 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 27 00:18:39 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 27 00:18:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 27 00:18:39 symfony [info] {clubActions} Call "clubActions->executeIndex()"
+Oct 27 00:18:39 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 27 00:18:39 symfony [info] {Doctrine_Connection_Mysql} query : SELECT h.id AS h__id, h.tipo_historia_id AS h__tipo_historia_id, h.param1 AS h__param1 FROM historia h ORDER BY h.updated_at DESC LIMIT 20 - ()
+Oct 27 00:18:39 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\modules/club/templates/indexSuccess.php"
+Oct 27 00:18:39 symfony [info] {sfPHPView} Decorate content with "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 27 00:18:39 symfony [info] {sfPHPView} Render "D:\Trabajos\Webs\hayequiposf\apps\frontend\templates/layout.php"
+Oct 27 00:18:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Oct 27 00:18:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.apellido AS j__apellido, j.nombre AS j__nombre, j.fecha_nacimiento AS j__fecha_nacimiento, j.localidad_id AS j__localidad_id, j.sexo AS j__sexo, j.user_id AS j__user_id, j.apodo AS j__apodo, j.imagen AS j__imagen, j.dorsal AS j__dorsal FROM jugador j WHERE (j.user_id IN (?)) - (1)
+Oct 27 00:18:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 27 00:18:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 27 00:18:39 symfony [info] {sfWebDebugLogger} Configuration 11.89 ms (9)
+Oct 27 00:18:39 symfony [info] {sfWebDebugLogger} Factories 68.07 ms (1)
+Oct 27 00:18:39 symfony [info] {sfWebDebugLogger} Action "club/index" 56.47 ms (1)
+Oct 27 00:18:39 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (4)
+Oct 27 00:18:39 symfony [info] {sfWebDebugLogger} View "Success" for "club/index" 60.45 ms (1)
+Oct 27 00:18:39 symfony [info] {sfWebResponse} Send content (43381 o)

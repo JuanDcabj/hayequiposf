@@ -43,10 +43,11 @@
                 switch($ultimas[$i]['tipo_historia_id'])
                 {
                     case 1: //Partido Iniciado
-                        $historia=Doctrine::getTable("Partido")->find($ultimas[$i]["id"]);
+                        $partido=Doctrine::getTable("Partido")->find($ultimas[$i]["param1"]);
+                        include_partial('partido_iniciado', array('indice' => $i, 'partido' => $partido));
                         break;
                     case 3: //Publicacion
-                        $publicacion=Doctrine::getTable("Publicacion")->find($ultimas[$i]["id"]);
+                        $publicacion=Doctrine::getTable("Publicacion")->find($ultimas[$i]["param1"]);
                         include_partial('publicacion', array('indice' => $i, 'publicacion' => $publicacion));
                         break;
                 }

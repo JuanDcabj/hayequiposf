@@ -17,6 +17,7 @@ abstract class BaseEquipo_PartidoForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
       'nombre'     => new sfWidgetFormInputText(),
+      'partido_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Partido'), 'add_empty' => false)),
       'tactica_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tactica'), 'add_empty' => false)),
       'capitan_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Jugador_Partido'), 'add_empty' => true)),
     ));
@@ -24,6 +25,7 @@ abstract class BaseEquipo_PartidoForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'nombre'     => new sfValidatorString(array('max_length' => 100)),
+      'partido_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Partido'))),
       'tactica_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tactica'))),
       'capitan_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Jugador_Partido'), 'required' => false)),
     ));
