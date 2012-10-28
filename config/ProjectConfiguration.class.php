@@ -1,6 +1,6 @@
 <?php
 
-require_once($_SERVER["DOCUMENT_ROOT"] . '/../lib/vendor/symfony-1.4.18/lib/autoload/sfCoreAutoload.class.php');
+require_once 'D://Server//xampp//symfony-1.4.18//lib/autoload/sfCoreAutoload.class.php';
 sfCoreAutoload::register();
 
 class ProjectConfiguration extends sfProjectConfiguration
